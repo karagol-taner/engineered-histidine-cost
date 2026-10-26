@@ -1,0 +1,88 @@
+ladder_robustness.py
+cohort = transmembrane, 2000 bins, 1000 bootstrap resamples over proteins
+
+parsed 5846493 rows, 504 proteins, 308280 positions, 1782983 baseline, 142557 on a core edge
+substitutions scored per position: median 19, min 17, max 38
+
+binning check against the exact pooled values: largest difference 0.0005 over 12 edges
+
+pooled ordering (histogram): Q>E, Q>K, H>N, K>Q, E>Q, N>H, D>N, N>D, E>K, K>E, H>D, D>H
+
+====================================================================================================
+1  WITHIN-PROTEIN REPLICATION
+a protein enters with at least 5 positions for each of at least 12 substitutions
+
+proteins qualifying: 376 of 504
+Spearman rho against the pooled ordering, per protein:
+   median +0.769, quartiles +0.657 to +0.853, range +0.147 to +0.979
+   positive in 376 of 376 proteins (100.0%)
+   above +0.5 in 351 (93.4%)
+D>H is the worst of the substitutions present in 229 of 376 proteins (60.9%)
+N>H is better tolerated than D>H in 351 of 376 proteins (93.4%)
+
+====================================================================================================
+2  CLUSTER BOOTSTRAP OVER PROTEINS, 1000 resamples
+
+edge    pooled    95% interval         rank     rank 95%
+Q>E     +0.494    +0.481 to +0.507      1        1 to 1
+Q>K     +0.321    +0.304 to +0.337      2        2 to 2
+H>N     +0.262    +0.244 to +0.281      3        3 to 3
+K>Q     +0.226    +0.210 to +0.242      4        4 to 5
+E>Q     +0.214    +0.200 to +0.226      5        4 to 6
+N>H     +0.198    +0.178 to +0.216      6        5 to 7
+D>N     +0.179    +0.165 to +0.192      7        6 to 7
+N>D     +0.093    +0.072 to +0.113      8        8 to 9
+E>K     +0.083    +0.065 to +0.102      9        8 to 9
+K>E     +0.023    +0.002 to +0.043      10       10 to 10
+H>D     -0.020    -0.040 to +0.001      11       11 to 11
+D>H     -0.168    -0.181 to -0.156      12       12 to 12
+
+D>H is last of twelve in 100.0% of resamples
+D>H is in the bottom two in 100.0% of resamples
+N>H is better tolerated than D>H in 100.0% of resamples
+the N>H minus D>H difference is +0.366, 95% interval +0.343 to +0.387
+
+====================================================================================================
+3  LEAVE-ONE-OUT POSITIONAL CONSTRAINT
+deciles are cut on the baseline rows
+
+constraint of a position, mean of the other substitutions: median 0.618, decile cuts 0.16 0.24 0.35 0.49 0.62 0.74 0.83 0.91 0.96
+
+edge    D1   D2   D3   D4   D5   D6   D7   D8   D9   D10
+Q>E     +0.45  +0.63  +0.65  +0.63  +0.55  +0.55  +0.57  +0.62  +0.66  +0.78
+Q>K     +0.20  +0.44  +0.46  +0.37  +0.20  +0.05  -0.05  -0.07  -0.17  +0.01
+H>N     +0.22  +0.16  +0.12  +0.12  +0.15  +0.14  +0.24  +0.30  +0.33  +0.19
+K>Q     +0.02  +0.34  +0.49  +0.52  +0.47  +0.49  +0.52  +0.50  +0.33  -0.02
+E>Q     +0.13  +0.30  +0.40  +0.40  +0.32  +0.35  +0.42  +0.50  +0.56  +0.46
+N>H     +0.38  +0.43  +0.41  +0.36  +0.27  +0.25  +0.28  +0.26  +0.25  +0.15
+D>N     +0.22  +0.46  +0.54  +0.53  +0.48  +0.50  +0.56  +0.58  +0.63  +0.35
+N>D     +0.19  +0.18  +0.12  +0.09  +0.02  -0.05  -0.05  -0.05  -0.08  -0.14
+E>K     +0.16  +0.36  +0.28  +0.15  -0.04  -0.10  -0.09  -0.06  -0.01  -0.09
+K>E     +0.29  +0.43  +0.28  +0.10  -0.04  -0.11  -0.15  -0.28  -0.44  -0.49
+H>D     -0.35  -0.58  -0.62  -0.63  -0.58  -0.57  -0.51  -0.45  -0.40  -0.43
+D>H     -0.49  -0.45  -0.43  -0.39  -0.36  -0.34  -0.29  -0.24  -0.15  -0.30
+
+rank of each substitution inside each decile (1 = best tolerated):
+edge    D1   D2   D3   D4   D5   D6   D7   D8   D9   D10
+Q>E     1    1    1    1    1    1    1    1    1    1  
+Q>K     6    3    4    5    6    7    7    9    10   6  
+H>N     4    10   9    8    7    6    6    5    4    4  
+K>Q     10   7    3    3    3    3    3    4    5    7  
+E>Q     9    8    6    4    4    4    4    3    3    2  
+N>H     2    4    5    6    5    5    5    6    6    5  
+D>N     5    2    2    2    2    2    2    2    2    3  
+N>D     7    9    10   10   8    8    8    7    8    9  
+E>K     8    6    7    7    9    9    9    8    7    8  
+K>E     3    5    8    9    10   10   10   11   12   12 
+H>D     11   12   12   12   12   12   12   12   11   11 
+D>H     12   11   11   11   11   11   11   10   9    10 
+
+D>H is last in 1 of the 10 reportable deciles
+D>H's Cliff delta runs from -0.493 in the least constrained decile to -0.302 in the most
+N>H runs from +0.379 to +0.145 over the same range
+Spearman rho of each decile's ordering against the pooled ordering: +0.51, +0.53, +0.71, +0.75, +0.78, +0.78, +0.78, +0.69, +0.61, +0.78
+wrote ../data/ladder_percell_transmembrane.csv
+
+wrote ../data/ladder_within_protein_transmembrane.csv
+
+wrote ../data/ladder_robustness_transmembrane.csv

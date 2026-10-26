@@ -1,0 +1,87 @@
+ladder_geometry.py
+
+structures found: 188
+structures used: 188, skipped: 0
+
+residues measured per type
+type  letter        n      atoms    reach A sc SASA A2
+ASP   D           675          4       3.50       74.4
+ASN   N           520          4       3.55       74.2
+HIS   H           330          6       4.56      108.9
+GLU   E          1044          5       4.65       90.4
+GLN   Q           513          5       4.69       87.0
+LYS   K          1028          5       5.59      104.8
+TYR   Y           421          8       6.44       65.1
+ARG   R           637          7       6.55      126.8
+
+shape overlap between types, in a common backbone frame
+subst     overlap    d reach A      d atoms
+E>Q         0.771         0.04            0
+K>Q         0.610        -0.90            0
+Q>K         0.610         0.90            0
+Q>E         0.771        -0.04            0
+N>H         0.509         1.01            2
+D>N         0.846         0.05            0
+N>D         0.846        -0.05            0
+D>H         0.501         1.06            2
+E>K         0.645         0.94            0
+K>E         0.645        -0.94            0
+H>N         0.509        -1.01           -2
+H>D         0.501        -1.06           -2
+Y>H         0.536        -1.88           -2
+K>R         0.603         0.96            2
+
+measured geometry against the measured ordering, over the twelve
+  shape overlap                Spearman rho +0.424
+  change in reach, magnitude   Spearman rho -0.721
+  change in atom count, magn.  Spearman rho -0.563
+
+equal-sample check, every type cut to 330 residues, 20 repeats
+subst        full      mean        sd
+E>Q         0.771     0.725     0.013
+K>Q         0.610     0.583     0.011
+Q>K         0.610     0.583     0.011
+Q>E         0.771     0.725     0.013
+N>H         0.509     0.503     0.004
+D>N         0.846     0.817     0.012
+N>D         0.846     0.817     0.012
+D>H         0.501     0.496     0.006
+E>K         0.645     0.598     0.011
+K>E         0.645     0.598     0.011
+H>N         0.509     0.503     0.004
+H>D         0.501     0.496     0.006
+Y>H         0.536     0.532     0.004
+K>R         0.603     0.537     0.005
+
+voxel sensitivity
+voxel A   rho overlap  rho |d reach|
+0.4             0.424         -0.721
+0.5             0.424         -0.721
+0.6             0.424         -0.721
+
+full overlap matrix
+            D      N      H      E      Q      K      Y      R
+D       1.000  0.846  0.501  0.463  0.452  0.463  0.421  0.332
+N       0.846  1.000  0.509  0.471  0.456  0.466  0.416  0.332
+H       0.501  0.509  1.000  0.427  0.405  0.416  0.536  0.345
+E       0.463  0.471  0.427  1.000  0.771  0.645  0.337  0.514
+Q       0.452  0.456  0.405  0.771  1.000  0.610  0.331  0.495
+K       0.463  0.466  0.416  0.645  0.610  1.000  0.371  0.603
+Y       0.421  0.416  0.536  0.337  0.331  0.371  1.000  0.331
+R       0.332  0.332  0.345  0.514  0.495  0.603  0.331  1.000
+
+representative side chain, medoid of the most populated chi1 well
+type  well       n in    share    rmsd A   atoms
+ASP   g+          304     0.45      0.66   CB CG OD1 OD2
+ASN   g+          248     0.48      0.81   CB CG ND2 OD1
+HIS   g+          136     0.41      1.04   CB CD2 CE1 CG ND1 NE2
+GLU   g+          540     0.52      1.46   CB CD CG OE1 OE2
+GLN   g+          311     0.61      1.40   CB CD CG NE2 OE1
+LYS   g+          497     0.49      1.48   CB CD CE CG NZ
+TYR   g+          220     0.52      1.09   CB CD1 CD2 CE1 CE2 CG CZ OH
+ARG   g+          332     0.52      2.35   CB CD CG CZ NE NH1 NH2
+
+wrote data/ladder_geometry.csv, data/ladder_geometry_clouds.npz and data/ladder_geometry_structures.csv
+
+the predicts_cliff rank agreements above are computed against data/ladder_core_fullprec.csv,
+the full-precision Cliff deltas the manuscript and Supplementary Table S2 use

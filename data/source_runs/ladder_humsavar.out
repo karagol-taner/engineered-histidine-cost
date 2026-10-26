@@ -1,0 +1,42 @@
+variants parsed: 85014  (LP/P 33332, LB/B 39964, US 11718)
+file-wide pathogenic fraction: 45.5% of 73296 classified variants
+An edge below that line is better tolerated in curated human variation.
+
+--- 12 core edges, best tolerated first ---
+edge    dir     LP/P    LB/B    US     path %   95% Wilson       snv   vs file
+Q>E     acidic  64      196     42     24.6     19.8 to 30.2     y     tolerated
+K>Q     acidic  50      148     38     25.3     19.7 to 31.7     y     tolerated
+E>Q     basic   116     282     97     29.1     24.9 to 33.8     y     tolerated
+Q>K     basic   73      140     37     34.3     28.2 to 40.9     y     tolerated
+N>D     acidic  132     251     48     34.5     29.9 to 39.4     y     tolerated
+N>H     basic   57      102     33     35.8     28.8 to 43.6     y     tolerated
+H>N     acidic  40      71      21     36.0     27.7 to 45.3     y     tolerated
+K>E     acidic  250     386     88     39.3     35.6 to 43.2     y     tolerated
+D>N     basic   505     604     201    45.5     42.6 to 48.5     y     not separated
+E>K     basic   883     815     346    52.0     49.6 to 54.4     y     damaging
+H>D     acidic  64      57      30     52.9     44.0 to 61.6     y     not separated
+D>H     basic   194     156     86     55.4     50.2 to 60.5     y     damaging
+
+--- 5 arginine edges (second codon position) ---
+edge    dir     LP/P    LB/B    US     path %   95% Wilson       snv   vs file
+K>R     -       119     456     75     20.7     17.6 to 24.2     y     tolerated
+Q>R     -       215     569     91     27.4     24.4 to 30.7     y     tolerated
+H>R     -       270     445     89     37.8     34.3 to 41.4     y     tolerated
+R>Q     -       1063    1273    354    45.5     43.5 to 47.5     y     not separated
+R>H     -       946     1107    302    46.1     43.9 to 48.2     y     not separated
+
+--- proposed extensions ---
+edge    dir     LP/P    LB/B    US     path %   95% Wilson       snv   vs file
+E>D     -       128     423     99     23.2     19.9 to 26.9     y     tolerated
+D>E     -       119     353     64     25.2     21.5 to 29.3     y     tolerated
+Q>H     -       118     344     73     25.5     21.8 to 29.7     y     tolerated
+H>Q     -       105     219     51     32.4     27.5 to 37.7     y     tolerated
+K>N     -       154     277     90     35.7     31.4 to 40.4     y     tolerated
+H>Y     -       185     248     83     42.7     38.1 to 47.4     y     not separated
+Y>H     -       188     219     56     46.2     41.4 to 51.0     y     not separated
+N>K     -       232     235     78     49.7     45.2 to 54.2     y     not separated
+
+rank agreement over the 12 core edges with enough variants:
+  humsavar pathogenic fraction vs AlphaMissense Cliff delta, Spearman rho = +0.846
+  humsavar order : Q>E, K>Q, E>Q, Q>K, N>D, N>H, H>N, K>E, D>N, E>K, H>D, D>H
+  AlphaMissense  : Q>E, N>H, Q>K, K>Q, E>Q, H>N, D>N, N>D, E>K, K>E, H>D, D>H

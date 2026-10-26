@@ -1,0 +1,40 @@
+rows parsed: 306622
+baseline: single-nucleotide-reachable substitutions, n=95325 mean=0.5280 median=0.4794
+Cliff's delta vs baseline. POSITIVE = better tolerated than an average single-base substitution.
+
+--- 12 core edges, best tolerated first ---
+edge    dir    n        snv%   mean     median   cliff   dQ      benign% sectors
+Q>E     acidic 720      100    0.2893   0.1431   +0.413  -1.0    70.8    membrane_sector 31:0.234  soluble 689:0.292
+N>H     basic  591      100    0.3849   0.2144   +0.233  +0.1    60.9    membrane_sector 35:0.381  soluble 556:0.385
+Q>K     basic  720      100    0.3932   0.2027   +0.233  +1.0    59.3    membrane_sector 31:0.361  soluble 689:0.395
+K>Q     acidic 1023     100    0.3905   0.2374   +0.191  -1.0    59.4    membrane_sector 37:0.465  soluble 986:0.388
+E>Q     basic  1154     100    0.4144   0.2820   +0.158  +1.0    54.8    membrane_sector 53:0.560  soluble 1101:0.407
+H>N     acidic 301      100    0.4704   0.3194   +0.113  -0.1    51.5    membrane_sector 17:0.501  soluble 284:0.469
+D>N     basic  887      100    0.4763   0.3541   +0.087  +1.0    49.5    membrane_sector 38:0.500  soluble 849:0.475
+N>D     acidic 591      100    0.4756   0.3505   +0.079  -1.0    49.1    membrane_sector 35:0.524  soluble 556:0.473
+E>K     basic  1154     100    0.5445   0.5416   -0.039  +2.0    39.3    membrane_sector 53:0.721  soluble 1101:0.536
+K>E     acidic 1023     100    0.5572   0.5392   -0.066  -2.0    37.4    membrane_sector 37:0.706  soluble 986:0.552
+H>D     acidic 301      100    0.6332   0.7214   -0.187  -1.1    31.6    membrane_sector 17:0.741  soluble 284:0.627
+D>H     basic  887      100    0.6673   0.8013   -0.253  +1.1    25.9    membrane_sector 38:0.767  soluble 849:0.663
+
+--- 5 arginine edges (second codon position, see codon_audit.py) ---
+edge    dir    n        snv%   mean     median   cliff   dQ      benign% sectors
+K>R     -      1023     100    0.1713   0.0962   +0.630  +0.0    89.0    membrane_sector 37:0.124  soluble 986:0.173
+Q>R     -      720      100    0.3941   0.2102   +0.238  +1.0    58.6    membrane_sector 31:0.353  soluble 689:0.396
+R>Q     -      1019     32     0.4128   0.2342   +0.192  -1.0    57.6    membrane_sector 36:0.365  soluble 983:0.415
+R>H     -      1019     29     0.4529   0.3299   +0.103  -0.9    51.0    membrane_sector 36:0.396  soluble 983:0.455
+H>R     -      301      100    0.5226   0.4497   +0.030  +0.9    45.8    membrane_sector 17:0.633  soluble 284:0.516
+
+--- proposed extensions ---
+edge    dir    n        snv%   mean     median   cliff   dQ      benign% sectors
+E>D     -      1154     100    0.3872   0.2188   +0.206  +0.0    61.1    membrane_sector 53:0.507  soluble 1101:0.381
+H>Y     -      301      100    0.4387   0.2572   +0.164  -0.1    56.1    membrane_sector 17:0.493  soluble 284:0.435
+D>E     -      887      100    0.5068   0.4224   +0.022  +0.0    46.2    membrane_sector 38:0.527  soluble 849:0.506
+Q>H     -      720      100    0.4968   0.3995   +0.003  +0.1    46.7    membrane_sector 31:0.405  soluble 689:0.501
+H>Q     -      301      100    0.5412   0.4784   -0.030  -0.1    42.5    membrane_sector 17:0.571  soluble 284:0.539
+N>K     -      591      100    0.6357   0.6942   -0.206  +1.0    28.6    membrane_sector 35:0.690  soluble 556:0.632
+Y>H     -      501      100    0.6915   0.8444   -0.249  +0.1    23.0    membrane_sector 31:0.702  soluble 470:0.691
+K>N     -      1023     100    0.6900   0.7828   -0.268  -1.0    18.6    membrane_sector 37:0.829  soluble 986:0.685
+
+basic-direction core edges   n=5393    mean=0.4880  cliff=+0.055
+acidic-direction core edges  n=3959    mean=0.4524  cliff=+0.114

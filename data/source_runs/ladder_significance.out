@@ -1,0 +1,58 @@
+==============================================================================
+1  EACH SUBSTITUTION AGAINST ITS BASELINE
+
+AlphaMissense soluble: 24 proteins, cluster bootstrap over proteins, 10000 resamples
+edge       cliff 95% interval                  p       BH p
+Q>E       +0.449  +0.395 to +0.510      0.0001     0.0002
+K>Q       +0.229  +0.145 to +0.305      0.0001     0.0002
+E>Q       +0.187  +0.132 to +0.239      0.0001     0.0002
+Q>K       +0.241  +0.172 to +0.322      0.0001     0.0002
+N>D       +0.112  +0.054 to +0.164      0.0002     0.0003
+N>H       +0.286  +0.208 to +0.359      0.0001     0.0002
+H>N       +0.141  +0.040 to +0.248      0.0056     0.0067
+K>E       -0.050  -0.124 to +0.030      0.2096     0.2096
+D>N       +0.124  +0.080 to +0.172      0.0001     0.0002
+E>K       -0.041  -0.093 to +0.017      0.1650     0.1800
+H>D       -0.216  -0.302 to -0.121      0.0001     0.0002
+D>H       -0.254  -0.305 to -0.198      0.0001     0.0002
+  N>H minus D>H: +0.540, 95% +0.449 to +0.638, p = 0.0001
+
+AlphaMissense transmembrane: 376 proteins, cluster bootstrap over proteins, 10000 resamples
+edge       cliff 95% interval                  p       BH p
+Q>E       +0.521  +0.509 to +0.533      0.0001     0.0001
+K>Q       +0.257  +0.242 to +0.272      0.0001     0.0001
+E>Q       +0.245  +0.235 to +0.256      0.0001     0.0001
+Q>K       +0.344  +0.328 to +0.359      0.0001     0.0001
+N>D       +0.121  +0.103 to +0.140      0.0001     0.0001
+N>H       +0.230  +0.213 to +0.247      0.0001     0.0001
+H>N       +0.274  +0.255 to +0.293      0.0001     0.0001
+K>E       +0.054  +0.034 to +0.074      0.0001     0.0001
+D>N       +0.214  +0.202 to +0.227      0.0001     0.0001
+E>K       +0.117  +0.099 to +0.135      0.0001     0.0001
+H>D       -0.023  -0.044 to -0.003      0.0266     0.0266
+D>H       -0.158  -0.169 to -0.147      0.0001     0.0001
+  N>H minus D>H: +0.388, 95% +0.367 to +0.410, p = 0.0001
+
+==============================================================================
+2  RANK AGREEMENT BETWEEN READOUTS
+comparison                                 rho     n          p  basis
+megascale vs AM soluble                 +0.734    12    0.00836  200000 random permutations
+megascale vs humsavar tolerance         +0.783    12    0.00370  200000 random permutations
+fireprot vs AM soluble                  +0.482    11    0.13749  200000 random permutations
+fireprot vs humsavar tolerance          +0.455    11    0.16313  200000 random permutations
+s669 vs AM soluble                      +0.400     4    0.75000  exact over 24 permutations
+s669 vs humsavar tolerance              +0.400     4    0.75000  exact over 24 permutations
+humsavar tolerance vs AM soluble        +0.846    12    0.00089  200000 random permutations
+AM soluble vs AM transmembrane          +0.909    12    0.00011  200000 random permutations
+megascale vs AM transmembrane           +0.622    12    0.03399  200000 random permutations
+humsavar tolerance vs AM transmembrane  +0.839    12    0.00102  200000 random permutations
+megascale vs fireprot                   +0.682    11    0.02576  200000 random permutations
+
+==============================================================================
+3  GEOMETRY AGAINST THE ORDERING
+  |change in reach| vs megascale Cliff, over the twelve
+    rho -0.721, p = 0.01129, 200000 random permutations
+  the same at pair level, where the descriptor actually varies
+    rho -0.771 over 6 pairs, p = 0.10278, exact over 720 permutations
+
+wrote data/ladder_significance.csv
