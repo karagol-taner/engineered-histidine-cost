@@ -1,0 +1,23 @@
+genes: 12692, classified variants: 73296 (33332 LP/P, 39964 LB/B)
+file-wide pathogenic fraction: 45.5%
+
+edge         n   genes      pct Wilson 95%         gene-cluster 95%    ratio
+Q>E        260     244    24.6    19.8 to 30.2      19.3 to 30.7      1.09
+K>Q        198     181    25.3    19.7 to 31.7      18.6 to 31.7      1.09
+E>Q        398     358    29.1    24.9 to 33.8      24.3 to 34.3      1.13
+Q>K        213     200    34.3    28.2 to 40.9      27.8 to 41.2      1.06
+N>D        383     352    34.5    29.9 to 39.4      29.3 to 39.5      1.07
+N>H        159     151    35.8    28.8 to 43.6      28.4 to 43.6      1.03
+H>N        111     106    36.0    27.7 to 45.3      26.7 to 45.9      1.09
+K>E        636     551    39.3    35.6 to 43.2      34.9 to 43.8      1.19
+D>N       1109     851    45.5    42.6 to 48.5      41.9 to 49.1      1.23
+E>K       1698    1195    52.0    49.6 to 54.4      48.4 to 55.5      1.50
+H>D        121     114    52.9    44.0 to 61.6      43.9 to 62.1      1.04
+D>H        350     300    55.4    50.2 to 60.5      49.3 to 61.3      1.16
+
+D>H minus N>H in pathogenic fraction
+  observed +19.6 points, gene-clustered 95% interval +10.7 to +28.7
+  excludes zero: yes
+  bootstrap p, two sided: 0.0000
+
+wrote ../../data/ladder_humsavar_clusters.csv

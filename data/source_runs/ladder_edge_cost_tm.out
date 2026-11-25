@@ -1,0 +1,40 @@
+rows parsed: 5846493
+baseline: single-nucleotide-reachable substitutions, n=1782983 mean=0.4620 median=0.3390
+Cliff's delta vs baseline. POSITIVE = better tolerated than an average single-base substitution.
+
+--- 12 core edges, best tolerated first ---
+edge    dir    n        snv%   mean     median   cliff   dQ      benign% sectors
+Q>E     acidic 10815    99     0.1955   0.1001   +0.494  -1.0    83.1    -
+Q>K     basic  10815    99     0.2929   0.1216   +0.321  +1.0    72.0    -
+H>N     acidic 6609     99     0.3200   0.1544   +0.262  -0.1    68.1    -
+K>Q     acidic 13763    98     0.3028   0.1645   +0.226  -1.0    70.9    -
+E>Q     basic  16012    98     0.3193   0.1671   +0.214  +1.0    68.3    -
+N>H     basic  11776    98     0.3542   0.1785   +0.198  +0.1    63.2    -
+D>N     basic  12297    98     0.3632   0.1707   +0.179  +1.0    63.3    -
+N>D     acidic 11769    98     0.4154   0.2424   +0.093  -1.0    56.3    -
+E>K     basic  16038    98     0.4099   0.2443   +0.083  +2.0    56.8    -
+K>E     acidic 13769    98     0.4379   0.3066   +0.023  -2.0    52.5    -
+H>D     acidic 6605     99     0.4666   0.3407   -0.020  -1.1    49.9    -
+D>H     basic  12289    98     0.5382   0.4728   -0.168  +1.1    41.6    -
+
+--- 5 arginine edges (second codon position, see codon_audit.py) ---
+edge    dir    n        snv%   mean     median   cliff   dQ      benign% sectors
+K>R     -      13778    98     0.1344   0.0865   +0.625  +0.0    93.4    -
+Q>R     -      10823    99     0.2885   0.1135   +0.352  +1.0    72.3    -
+R>Q     -      15683    33     0.2809   0.1253   +0.321  -1.0    73.9    -
+H>R     -      6613     99     0.3557   0.1509   +0.241  +0.9    64.3    -
+R>H     -      15688    32     0.3158   0.1565   +0.229  -0.9    69.4    -
+
+--- proposed extensions ---
+edge    dir    n        snv%   mean     median   cliff   dQ      benign% sectors
+H>Y     -      6617     99     0.2993   0.1367   +0.285  -0.1    71.5    -
+E>D     -      16039    98     0.3444   0.1660   +0.199  +0.0    65.9    -
+H>Q     -      6600     98     0.3958   0.2221   +0.107  -0.1    58.9    -
+Q>H     -      10826    99     0.4030   0.2443   +0.041  +0.1    59.2    -
+D>E     -      12313    98     0.4348   0.2666   +0.036  +0.0    54.5    -
+N>K     -      11778    98     0.5743   0.5683   -0.224  +1.0    37.7    -
+K>N     -      13764    98     0.5899   0.5973   -0.250  -1.0    30.9    -
+Y>H     -      10066    98     0.6244   0.7188   -0.269  +0.1    28.9    -
+
+basic-direction core edges   n=79227   mean=0.3800  cliff=+0.135
+acidic-direction core edges  n=63330   mean=0.3536  cliff=+0.181

@@ -1,0 +1,11 @@
+quantity,value,n,p
+"overlap vs Cliff delta, ordered classes",+0.313,306,0.00005
+"overlap vs mean Cliff delta, residue pairs",+0.528,153,0.00005
+"the same, change in heavy atoms held constant",+0.455,153,
+"the same, change in reach held constant",+0.509,153,
+|change in heavy atoms| vs mean Cliff delta,-0.313,153,
+|change in reach| vs mean Cliff delta,-0.232,153,
+"overlap range, all classes",0.100 to 0.857,306,
+"overlap range, the twelve",0.501 to 0.846,12,
+residue types measured,19,10967,
+residue types used in the test,18,10964,

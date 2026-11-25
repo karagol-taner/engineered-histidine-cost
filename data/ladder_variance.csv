@@ -1,0 +1,52 @@
+analysis,key,value
+megascale_core,tau2_sub,0.025601
+megascale_core,tau2_int,0.063084
+megascale_core,samp,0.066870
+megascale_core,share,0.288672
+megascale_core,cells,1811
+megascale_core,subs,12
+megascale_core,groups,297
+megascale_core_transfer,r,0.289271
+megascale_core_transfer,r2,0.083678
+megascale_core_transfer,rho,0.162927
+megascale_core_transfer,n,1811
+megascale_all,tau2_sub,0.294903
+megascale_all,tau2_int,0.095521
+megascale_all,samp,0.149236
+megascale_all,share,0.755341
+megascale_all,cells,44557
+megascale_all,subs,361
+megascale_all,groups,298
+megascale_all_transfer,r,0.689357
+megascale_all_transfer,r2,0.475213
+megascale_all_transfer,rho,0.679989
+megascale_all_transfer,n,44557
+cohort_core_transfer,r,0.598099
+cohort_core_transfer,r2,0.357722
+cohort_core_transfer,rho,0.593176
+cohort_core_transfer,n,5790
+cohort_core,tau2_sub,0.007667
+cohort_core,tau2_int,0.006119
+cohort_core,samp,0.006756
+cohort_core,share,0.556128
+cohort_core,cells,5790
+cohort_core,subs,12
+cohort_core,groups,501
+headtohead:all substitution classes,n,271181
+headtohead:all substitution classes,spearman_sub,0.4789
+headtohead:all substitution classes,spearman_pos,0.7417
+headtohead:all substitution classes,spearman_both,0.7793
+headtohead:all substitution classes,r2_sub,0.2636
+headtohead:all substitution classes,r2_pos,0.5697
+headtohead:all substitution classes,r2_both,0.6535
+headtohead:all substitution classes,gain_sub,0.0837
+headtohead:all substitution classes,gain_pos,0.3899
+headtohead:the twelve core substitutions,n,11111
+headtohead:the twelve core substitutions,spearman_sub,0.1678
+headtohead:the twelve core substitutions,spearman_pos,0.7050
+headtohead:the twelve core substitutions,spearman_both,0.7224
+headtohead:the twelve core substitutions,r2_sub,0.0422
+headtohead:the twelve core substitutions,r2_pos,0.5125
+headtohead:the twelve core substitutions,r2_both,0.5551
+headtohead:the twelve core substitutions,gain_sub,0.0426
+headtohead:the twelve core substitutions,gain_pos,0.5129

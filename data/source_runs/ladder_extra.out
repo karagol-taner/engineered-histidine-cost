@@ -1,0 +1,77 @@
+megascale: 271231 measurements, proline median +1.601 against +0.476 overall
+
+================================================================================================
+1  IS THE ORDERING SIDE-CHAIN CHEMISTRY?
+charge magnitude, side-chain volume and hydropathy, as magnitudes
+
+--- the twelve core substitutions, n = 12 ---
+    charge magnitude alone                  R squared 0.019
+    charge and volume                       R squared 0.410
+    charge, volume and hydropathy           R squared 0.635
+    volume and hydropathy, no charge        R squared 0.458
+
+--- all substitution classes with at least 3 measurements, n = 361 ---
+    charge magnitude alone                  R squared 0.012
+    charge and volume                       R squared 0.108
+    charge, volume and hydropathy           R squared 0.128
+    volume and hydropathy, no charge        R squared 0.123
+
+================================================================================================
+2  DOES THE ORDERING DEPEND ON THE BASELINE?
+
+edge    SNV baseline all subs     charge-matched
+E>Q     +0.318       +0.328       +0.263
+K>Q     +0.316       +0.326       +0.261
+Q>K     +0.298       +0.307       +0.244
+Q>E     +0.274       +0.284       +0.220
+N>H     +0.266       +0.276       +0.313
+D>N     +0.261       +0.273       +0.209
+N>D     +0.216       +0.229       +0.163
+E>K     +0.150       +0.165       +0.123
+D>H     +0.150       +0.164       +0.026
+K>E     +0.103       +0.120       +0.075
+H>N     +0.060       +0.080       +0.116
+H>D     -0.117       -0.096       -0.270
+
+rank agreement with the published baseline: all substitutions rho +1.000, charge-matched rho +0.902 over 12 edges
+baselines: single-nucleotide n=112293, all n=271231
+
+================================================================================================
+3  DOES THE ORDERING DEPEND ON THE FOLD?
+
+all-alpha           15014 measurements over  19 constructs
+mixed alpha/beta    52856 measurements over  71 constructs
+   all-alpha baseline n=6346, mean +0.670
+   mixed alpha/beta baseline n=21529, mean +0.674
+
+edge    all-alpha              mixed alpha/beta      
+Q>E     +0.424   (n=22   )      +0.223   (n=114  )
+K>Q     +0.416   (n=125  )      +0.355   (n=352  )
+K>E     +0.310   (n=124  )      +0.171   (n=350  )
+Q>K     +0.282   (n=22   )      +0.307   (n=113  )
+N>H     +0.276   (n=29   )      +0.156   (n=157  )
+N>D     +0.259   (n=29   )      +0.129   (n=157  )
+E>Q     +0.231   (n=158  )      +0.231   (n=401  )
+D>N     +0.145   (n=48   )      +0.355   (n=126  )
+D>H     +0.119   (n=48   )      +0.227   (n=126  )
+E>K     +0.054   (n=156  )      +0.095   (n=398  )
+
+rank agreement between the two topology classes: rho +0.188 over 10 edges
+
+FireProtDB secondary structure of the substituted position: {'H': 1252, 'E': 1216, '': 476, 'G': 269, 'L': 85, 'I': 53}
+   helix          n=1574  mean cost +1.010 kcal/mol, median +0.600
+   strand         n=1216  mean cost +1.267 kcal/mol, median +0.800
+   loop or coil   n=545   mean cost +0.876 kcal/mol, median +0.700
+
+================================================================================================
+4  TRANSITION AGAINST TRANSVERSION, WITHIN A SOURCE RESIDUE
+
+source   transition             transversion           ratio
+D        D>N        n=1310      D>H        n=436       3.00
+N        N>D        n=431       N>H        n=192       2.24
+E        E>K        n=2044      E>Q        n=495       4.13
+K        K>E        n=724       K>Q        n=236       3.07
+
+median transition to transversion ratio across the four source residues: 3.04
+
+wrote ../data/ladder_extra.csv

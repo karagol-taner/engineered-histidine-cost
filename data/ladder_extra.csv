@@ -1,0 +1,11 @@
+analysis,key,value
+descriptors:the twelve core substitutions,n,12
+descriptors:the twelve core substitutions,r2_charge,0.019
+descriptors:the twelve core substitutions,r2_charge_vol_hyd,0.635
+descriptors:all substitution classes with at least 3 measurements,n,361
+descriptors:all substitution classes with at least 3 measurements,r2_charge,0.012
+descriptors:all substitution classes with at least 3 measurements,r2_charge_vol_hyd,0.128
+baseline,rho_all_subs,1.000
+baseline,rho_charge_matched,0.902
+topology,rho_alpha_vs_mixed,0.188
+transition,median_ratio,3.04

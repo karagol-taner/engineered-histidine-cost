@@ -1,0 +1,13 @@
+edge,direction,cliff_megascale,cliff_fireprot,cliff_s669,cliff_alphamissense_soluble,humsavar_pathogenic_pct
+D>N,basic,0.261,0.048,-0.224,0.087,45.5
+N>D,acidic,0.216,0.315,nan,0.079,34.5
+E>Q,basic,0.318,0.273,0.168,0.158,29.1
+Q>E,acidic,0.274,0.190,nan,0.413,24.6
+N>H,basic,0.266,0.379,nan,0.233,35.8
+H>N,acidic,0.060,-0.284,nan,0.113,36.0
+Q>K,basic,0.298,0.437,nan,0.233,34.3
+K>Q,acidic,0.316,0.260,nan,0.191,25.3
+D>H,basic,0.150,0.101,-0.135,-0.253,55.4
+H>D,acidic,-0.117,nan,nan,-0.187,52.9
+E>K,basic,0.150,0.217,-0.095,-0.039,52.0
+K>E,acidic,0.103,0.026,nan,-0.066,39.3

@@ -1,0 +1,88 @@
+ladder_functional.py
+
+cohort: 95325 single-nucleotide baseline rows over 66 accessions
+fetching UniProt features for 66 accessions (0 already cached)
+   10/66
+   20/66
+   30/66
+   40/66
+   50/66
+   60/66
+   66/66
+position check: 0 of 18912 edge rows disagree with the UniProt residue (0.00%)
+annotated positions in the cohort: 310 across all accessions (ACT_SITE, BINDING, SITE; window=0)
+baseline, whole cohort    n=95325    mean=0.5280 median=0.4794
+baseline, annotated       n=1810     mean=0.8842 median=0.9955
+baseline, unannotated     n=93515    mean=0.5211 median=0.4613
+
+
+============================================================================================================
+--- 12 core edges, by functional annotation ---
+edge    dir    | n_ann   mean     global   matched  | n_unann mean     global   matched 
+D>N     basic  | 21      +0.9095  -0.688   -0.089   | 866     +0.4658  +0.106   +0.094  
+K>Q     acidic | 35      +0.8830  -0.685   -0.180   | 988     +0.3731  +0.222   +0.211  
+D>H     basic  | 21      +0.9271  -0.802   -0.374   | 866     +0.6610  -0.240   -0.254  
+K>E     acidic | 35      +0.9613  -0.786   -0.194   | 988     +0.5429  -0.040   -0.054  
+below n=20 in a stratum and not reported: N>D, E>Q, Q>E, N>H, H>N, Q>K, H>D, E>K
+
+============================================================================================================
+--- 5 arginine edges ---
+edge    dir    | n_ann   mean     global   matched  | n_unann mean     global   matched 
+K>R     -      | 35      +0.6914  -0.213   +0.569   | 988     +0.1529  +0.660   +0.654  
+R>Q     -      | 32      +0.7195  -0.321   +0.380   | 987     +0.4028  +0.209   +0.198  
+R>H     -      | 32      +0.7063  -0.319   +0.394   | 987     +0.4447  +0.117   +0.105  
+below n=20 in a stratum and not reported: Q>R, H>R
+
+============================================================================================================
+--- proposed extensions ---
+edge    dir    | n_ann   mean     global   matched  | n_unann mean     global   matched 
+D>E     -      | 21      +0.9168  -0.752   -0.200   | 866     +0.4969  +0.040   +0.028  
+K>N     -      | 35      +0.9771  -0.850   -0.442   | 988     +0.6799  -0.247   -0.263  
+below n=20 in a stratum and not reported: E>D, H>Y, Q>H, H>Q, N>K, Y>H
+
+============================================================================================================
+rank within each stratum, matched baseline, 1 = best tolerated
+
+edge    rank at annotated      rank at unannotated   
+D>N     1 of 4  (-0.089)       2 of 4  (+0.094)      
+K>Q     2 of 4  (-0.180)       1 of 4  (+0.211)      
+K>E     3 of 4  (-0.194)       3 of 4  (-0.054)      
+D>H     4 of 4  (-0.374)       4 of 4  (-0.254)      
+
+pathogenic fraction per stratum (AlphaMissense likely_pathogenic):
+edge    annotated                  unannotated               
+D>N      90.5%  (71.1-97.3, n=21)   40.2%  (37.0-43.5, n=866)
+K>Q      85.7%  (70.6-93.7, n=35)   26.3%  (23.7-29.1, n=988)
+K>E     100.0%  (90.1-100.0, n=35)  47.0%  (43.9-50.1, n=988)
+D>H      90.5%  (71.1-97.3, n=21)   61.1%  (57.8-64.3, n=866)
+
+============================================================================================================
+MEASURED FOLDING COST BY FIREPROT'S OWN FUNCTIONAL FLAGS
+flags: is_in_catalytic_pocket, is_essential
+
+sign: 27.6% of FireProt ddG values negative, so positive is destabilising; mapped to cost with higher = less stable
+sign check, proline: median +0.700 overall against +1.230 for X>P (n=84)
+
+379 of 3420 FireProt rows are flagged catalytic-pocket or essential (11.1%)
+
+edge    | flagged functional           | not flagged                 
+D>N     | +0.479 kcal/mol (n=9)        | +0.897 kcal/mol (n=22)      
+N>D     | +2.100 kcal/mol (n=2)        | +0.045 kcal/mol (n=18)      
+E>Q     | +0.318 kcal/mol (n=4)        | +0.203 kcal/mol (n=26)      
+Q>E     | +1.100 kcal/mol (n=1)        | +0.162 kcal/mol (n=4)       
+N>H     | no rows                      | +0.054 kcal/mol (n=7)       
+H>N     | +3.200 kcal/mol (n=2)        | +1.574 kcal/mol (n=4)       
+Q>K     | no rows                      | -0.109 kcal/mol (n=3)       
+K>Q     | +0.117 kcal/mol (n=3)        | +0.275 kcal/mol (n=21)      
+D>H     | +0.305 kcal/mol (n=4)        | +0.216 kcal/mol (n=5)       
+H>D     | no rows                      | +1.278 kcal/mol (n=2)       
+E>K     | -0.195 kcal/mol (n=4)        | +0.336 kcal/mol (n=27)      
+K>E     | +0.177 kcal/mol (n=3)        | +0.729 kcal/mol (n=24)      
+Y>H     | no rows                      | +2.397 kcal/mol (n=3)       
+N>K     | no rows                      | +0.143 kcal/mol (n=8)       
+H>Q     | +0.291 kcal/mol (n=3)        | +0.338 kcal/mol (n=8)       
+
+all substitutions, flagged  +0.820 kcal/mol (n=379)
+all substitutions, unflagged +1.101 kcal/mol (n=3041)
+
+wrote ../data/ladder_functional.csv

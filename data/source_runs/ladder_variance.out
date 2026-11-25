@@ -1,0 +1,64 @@
+ladder_variance.py
+
+====================================================================================================
+1  VARIANCE DECOMPOSITION
+megascale: 271231 measurements, 76.9% negative before mapping, proline median +1.601 against +0.476 overall
+
+--- measured folding stability, the twelve core substitutions ---
+    cell value is the mean cost of that substitution in that domain, minus the domain's own baseline
+    cells 1811 over 12 substitutions and 297 proteins, median cell n = 5
+    between-substitution variance    0.02560  (sd 0.160)
+    protein-by-substitution variance 0.06308  (sd 0.251)
+    mean sampling variance           0.06687  (sd 0.259)
+    SHARE ATTRIBUTABLE TO THE SUBSTITUTION: 29%
+
+--- transferability, measured folding stability, the twelve core substitutions ---
+    leave-one-protein-out, 1811 cells
+    Pearson r = +0.289, R squared = 0.084, Spearman rho = +0.163
+
+--- measured folding stability, all substitution classes ---
+    cells 44557 over 361 substitutions and 298 proteins, median cell n = 4
+    between-substitution variance    0.29490  (sd 0.543)
+    protein-by-substitution variance 0.09552  (sd 0.309)
+    mean sampling variance           0.14924  (sd 0.386)
+    SHARE ATTRIBUTABLE TO THE SUBSTITUTION: 76%
+
+--- transferability, all substitution classes ---
+    leave-one-protein-out, 44557 cells
+    Pearson r = +0.689, R squared = 0.475, Spearman rho = +0.680
+
+--- transferability, transmembrane cohort, the twelve core substitutions ---
+    leave-one-protein-out, 5790 cells
+    Pearson r = +0.598, R squared = 0.358, Spearman rho = +0.593
+
+--- transmembrane cohort, the twelve core substitutions ---
+    cell value is the mean pathogenicity score of that substitution in that protein, minus the protein's own baseline mean
+    cells 5790 over 12 substitutions and 501 proteins, median cell n = 16
+    between-substitution variance    0.00767  (sd 0.088)
+    protein-by-substitution variance 0.00612  (sd 0.078)
+    mean sampling variance           0.00676  (sd 0.082)
+    SHARE ATTRIBUTABLE TO THE SUBSTITUTION: 56%
+
+====================================================================================================
+2  THE SUBSTITUTION AGAINST THE POSITION
+Held-out domains, 5 folds. The position signal is the mean measured cost of
+every other substitution at the same position, which bounds what any
+position-specific predictor could extract from that position.
+
+--- all substitution classes, 271181 held-out measurements ---
+    predictor                          Spearman     R squared   
+    substitution identity alone        +0.479        0.264
+    position signal alone              +0.742        0.570
+    both together                      +0.779        0.653
+    what the substitution adds on top of the position: +0.084 R squared
+    what the position adds on top of the substitution: +0.390 R squared
+
+--- the twelve core substitutions, 11111 held-out measurements ---
+    predictor                          Spearman     R squared   
+    substitution identity alone        +0.168        0.042
+    position signal alone              +0.705        0.512
+    both together                      +0.722        0.555
+    what the substitution adds on top of the position: +0.043 R squared
+    what the position adds on top of the substitution: +0.513 R squared
+
+wrote ../data/ladder_variance.csv

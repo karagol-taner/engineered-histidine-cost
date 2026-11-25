@@ -1,0 +1,75 @@
+ladder_designed.py
+
+sign: 76.9% of values negative, so negative is destabilising; mapped to cost with higher = less stable
+sign check, proline: median cost +0.476 overall against +1.601 for X>P (n=12050)
+
+natural   185267 measurements over 189 domains
+designed   85964 measurements over 109 domains
+
+================================================================================================
+NATURAL domains: baseline is every single-nucleotide-reachable substitution, n=77164, mean +0.731 kcal/mol, median +0.440
+edge    dir     n        mean       median     cliff     95% interval
+K>R     -       938      -0.005     -0.020     +0.509    +0.488 to +0.529
+H>Y     -       170      +0.052     -0.033     +0.445    +0.373 to +0.526
+E>Q     basic   921      +0.153     +0.092     +0.353    +0.320 to +0.387
+Q>K     basic   440      +0.225     +0.083     +0.316    +0.268 to +0.362
+K>Q     acidic  936      +0.196     +0.129     +0.311    +0.278 to +0.344
+N>H     basic   473      +0.233     +0.094     +0.310    +0.269 to +0.350
+Q>E     acidic  445      +0.255     +0.142     +0.292    +0.243 to +0.334
+N>D     acidic  463      +0.288     +0.151     +0.263    +0.210 to +0.316
+D>N     basic   612      +0.278     +0.167     +0.258    +0.214 to +0.301
+N>K     -       467      +0.353     +0.176     +0.222    +0.171 to +0.273
+E>K     basic   904      +0.410     +0.276     +0.164    +0.116 to +0.215
+D>H     basic   609      +0.437     +0.277     +0.148    +0.098 to +0.193
+H>N     acidic  170      +0.459     +0.301     +0.120    +0.044 to +0.192
+K>E     acidic  924      +0.518     +0.398     +0.082    +0.034 to +0.130
+H>D     acidic  161      +0.851     +0.588     -0.086    -0.183 to +0.015
+Y>H     -       383      +1.161     +1.039     -0.298    -0.360 to -0.235
+
+================================================================================================
+DESIGNED domains: baseline is every single-nucleotide-reachable substitution, n=35129, mean +0.612 kcal/mol, median +0.452
+edge    dir     n        mean       median     cliff     95% interval
+K>R     -       614      +0.010     -0.012     +0.525    +0.468 to +0.575
+H>Y     -       92       -0.026     -0.079     +0.522    +0.407 to +0.621
+K>Q     acidic  615      +0.188     +0.170     +0.331    +0.268 to +0.386
+E>Q     basic   769      +0.240     +0.181     +0.279    +0.202 to +0.346
+D>N     basic   206      +0.252     +0.179     +0.270    +0.186 to +0.346
+Q>K     basic   140      +0.288     +0.232     +0.233    +0.129 to +0.325
+Q>E     acidic  141      +0.303     +0.295     +0.203    +0.109 to +0.297
+D>H     basic   206      +0.356     +0.305     +0.164    +0.083 to +0.240
+N>H     basic   210      +0.362     +0.318     +0.152    +0.069 to +0.234
+K>E     acidic  611      +0.380     +0.342     +0.142    +0.071 to +0.205
+E>K     basic   761      +0.396     +0.337     +0.133    +0.053 to +0.208
+N>D     acidic  210      +0.394     +0.395     +0.104    +0.036 to +0.172
+N>K     -       211      +0.483     +0.425     +0.042    -0.041 to +0.122
+H>N     acidic  92       +0.566     +0.529     -0.066    -0.157 to +0.025
+H>D     acidic  92       +0.750     +0.775     -0.191    -0.288 to -0.098
+Y>H     -       113      +1.020     +1.006     -0.393    -0.473 to -0.314
+
+================================================================================================
+DESIGNED AGAINST NATURAL, the comparison this was built for
+Spearman rho between the two orderings: +0.755 over 12 core substitutions
+
+edge    natural cliff (n)        designed cliff (n)       difference
+E>Q     +0.353   (n=921   )   +0.279   (n=769   )   -0.074
+Q>K     +0.316   (n=440   )   +0.233   (n=140   )   -0.084
+K>Q     +0.311   (n=936   )   +0.331   (n=615   )   +0.021
+N>H     +0.310   (n=473   )   +0.152   (n=210   )   -0.158
+Q>E     +0.292   (n=445   )   +0.203   (n=141   )   -0.089
+N>D     +0.263   (n=463   )   +0.104   (n=210   )   -0.159
+D>N     +0.258   (n=612   )   +0.270   (n=206   )   +0.012
+E>K     +0.164   (n=904   )   +0.133   (n=761   )   -0.031
+D>H     +0.148   (n=609   )   +0.164   (n=206   )   +0.016
+H>N     +0.120   (n=170   )   -0.066   (n=92    )   -0.186
+K>E     +0.082   (n=924   )   +0.142   (n=611   )   +0.060
+H>D     -0.086   (n=161   )   -0.191   (n=92    )   -0.106
+
+the routes to histidine, in kcal/mol and on the Cliff scale
+  N>H  natural  +0.233 kcal/mol, cliff +0.310 (+0.269 to +0.350), n=473
+       designed +0.362 kcal/mol, cliff +0.152 (+0.069 to +0.234), n=210
+  D>H  natural  +0.437 kcal/mol, cliff +0.148 (+0.098 to +0.193), n=609
+       designed +0.356 kcal/mol, cliff +0.164 (+0.083 to +0.240), n=206
+  Y>H  natural  +1.161 kcal/mol, cliff -0.298 (-0.360 to -0.235), n=383
+       designed +1.020 kcal/mol, cliff -0.393 (-0.473 to -0.314), n=113
+
+wrote ../data/ladder_designed.csv
